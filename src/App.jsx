@@ -1,7 +1,10 @@
+import Container from "./components/Container"
+import Cards from "./components/Cards"
+
 export default function App() {
   return (
-    <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <Container className={`bg-main h-screen w-full grid place-content-center`}>
+      <Cards />
+    </Container>
   )
 }
