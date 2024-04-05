@@ -3,7 +3,7 @@ import Cards from "./components/Cards"
 
 export default function App() {
   return (
-    <Container className={`bg-main h-screen w-full grid place-content-center`}>
+    <Container className={`bg-white h-screen w-full grid place-content-center`}>
       <Cards />
     </Container>
   )
