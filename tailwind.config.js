@@ -14,7 +14,8 @@ export default {
         'dark-gray': 'hsl(224, 30%, 27%)',
         'lavender': ' hsl(241, 100%, 89%)',
         'violet': 'hsla(256, 72%, 46%, 1)',
-        'persian': 'hsla(241, 72%, 46%, 0)'
+        'persian': 'hsla(241, 72%, 46%, 0)',
+        'light-red': 'hsl(0, 300%, 67%)'
       }
     },
   },

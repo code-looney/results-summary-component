@@ -9,6 +9,7 @@ import Button from './Button'
 const Cards = () => {
   const [result, setResult] = useState(76)
   const [list, setList] = useState(null)
+  const colors = ['bg-light-red', 'text-light-red'];
 
 
   useEffect(() => {
@@ -17,6 +18,12 @@ const Cards = () => {
     .then(data => setList(data))
   }, [])
 
+
+  function handleSummaryTextColor (index) {
+      if (index === 1) {
+        return 'light-red'
+      }
+  }
 
   return (
     <Container className={`bg-white flex h-screen md:h-[500px] outline `}>
@@ -38,7 +45,8 @@ const Cards = () => {
                           <Title className={`text-[21px] font-medium`}>Summary</Title>
                         </Container>
                         <ul>
-                          {list && list.map((item, index) => <li key={index} className={`flex outline  justify-between`}>{item.category} <span>{index ? item.score : ''} <span>{index ? '/ 100' : ''}</span></span></li>)}
+                          {list && list.map((item, index) => <li key={index} 
+                          className={`text-${handleSummaryTextColor(index)} bg-${handleSummaryTextColor(index)} bg-opacity-10 flex outline  justify-between`}>{item.category} <span>{index ? item.score : ''} <span>{index ? '/ 100' : ''}</span></span></li>)}
                         </ul>
                         <Container className={`flex justify-center`}><Button className={`outline w-40`}>Continue</Button></Container>
                 </Container>
