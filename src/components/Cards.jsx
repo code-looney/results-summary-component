@@ -9,7 +9,9 @@ import Button from './Button'
 const Cards = () => {
   const [result, setResult] = useState(76)
   const [list, setList] = useState(null)
-  const colors = ['bg-light-red', 'text-light-red'];
+  const [score, setScore] = useState(null)
+  const bgColors = ['bg-light-red', 'bg-orangey', 'bg-green-teal', 'bg-cobalt'];
+  const textColors = ['text-light-red', 'text-orangey', 'text-green-teal', 'text-cobalt'];
 
 
   useEffect(() => {
@@ -22,8 +24,26 @@ const Cards = () => {
   function handleSummaryTextColor (index) {
       if (index === 1) {
         return 'light-red'
+      } else if (index === 2) {
+        return 'orangey'
+      } else if (index === 3) {
+        return 'green-teal'
+      } else if (index === 4) {
+        return 'cobalt'
       }
   }
+
+  function handleIcons (index) {
+    if(index === 1) {
+      return 'reaction'
+    } else if(index === 2) {
+      return 'memory'
+    } else if(index === 3) {
+      return 'verbal'
+    } else if(index === 4) {
+      return 'visual'
+    }  
+  } 
 
   return (
     <Container className={`bg-white flex h-screen md:h-[500px] outline `}>
@@ -46,7 +66,8 @@ const Cards = () => {
                         </Container>
                         <ul>
                           {list && list.map((item, index) => <li key={index} 
-                          className={`text-${handleSummaryTextColor(index)} bg-${handleSummaryTextColor(index)} bg-opacity-10 flex outline  justify-between`}>{item.category} <span>{index ? item.score : ''} <span>{index ? '/ 100' : ''}</span></span></li>)}
+                          className={`text-${handleSummaryTextColor(index)} bg-${handleSummaryTextColor(index)} bg-opacity-10 flex outline`}>
+                          <img src={`public/images/icon-${handleIcons(index)}.svg`} alt="" />{item.category} <span className={'flex justify-end w-full gap-1'}>{index ? item.score : ''} <span>{index ? '/ 100' : ''}</span></span></li>)}
                         </ul>
                         <Container className={`flex justify-center`}><Button className={`outline w-40`}>Continue</Button></Container>
                 </Container>

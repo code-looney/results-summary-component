@@ -15,7 +15,10 @@ export default {
         'lavender': ' hsl(241, 100%, 89%)',
         'violet': 'hsla(256, 72%, 46%, 1)',
         'persian': 'hsla(241, 72%, 46%, 0)',
-        'light-red': 'hsl(0, 300%, 67%)'
+        'light-red': 'hsl(0, 300%, 67%)',
+        'orangey': 'hsl(39, 100%, 56%)',
+        'green-teal': ' hsl(166, 100%, 37%)',
+        'cobalt': 'hsl(234, 85%, 45%)'
       }
     },
   },
