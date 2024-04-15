@@ -6,7 +6,20 @@ export default {
   ],
   theme: {
     screens: {
-      'sm': '156px'
+      'sm': '156px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '1024px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
     },
     extend: {
       colors: {
@@ -21,7 +34,7 @@ export default {
         'light-red': 'hsl(0, 300%, 67%)',
         'orangey': 'hsl(39, 100%, 56%)',
         'green-teal': ' hsl(166, 100%, 37%)',
-        'cobalt': 'hsl(234, 85%, 45%)'
+        'cobalt': 'hsl(234, 85%, 45%)',
       }
     },
   },

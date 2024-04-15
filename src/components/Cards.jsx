@@ -48,8 +48,8 @@ const Cards = () => {
   } 
 
   return (
-    <Container className={`bg-white h-screen w-screen md:w-auto  flex flex-col md:flex-row  md:h-[500px] outline `}>
-        <Card className={`flex flex-col gap-5 justify-center  `}>
+    <Container className={`bg-white h-screen w-screen md:w-auto flex flex-col md:flex-row  md:h-[500px]`}>
+        <Card className={`flex flex-col gap-5 justify-center outline`}>
                 <Container className={`md:w-[400px] pt-6 pb-10 bg-gradient-to-t from-royal to-slate flex flex-col items-center rounded-b-[30px] md:rounded-[30px] gap-5`}>
                     <Title className={`text-lavender text-[21px] md:text-[24px] font-medium`}>Your Result</Title>
                     <Container 
@@ -62,19 +62,21 @@ const Cards = () => {
                     </Container>
                 </Container>
         </Card>
-            <Card className={`bg-white w-full flex flex-col gap-7`}>
-                <Container className={` w-full outline `}>
+            <Card className={`bg-white w-full flex flex-col gap-7 px-7 pb-14 pt-7 outline`}>
+                <Container className={` w-full flex flex-col gap-7`}>
                         <Container>
-                          <Title className={`text-[21px] font-medium`}>Summary</Title>
+                          <Title className={`text-[18px] font-medium text-dark-gray`}>Summary</Title>
                         </Container>
-                        <ul className={`flex flex-col gap-5`}>
+                        <ul className={`flex flex-col gap-5 flex-wrap sm:flex-nowrap `}>
                           {list && list.map((item, index) => <li key={index} 
-                          className={`text-${handleSummaryTextColor(index)} bg-${handleSummaryTextColor(index)} ${index === 0 ? 'hidden' : ''} bg-opacity-10 flex p-4 rounded-xl flex-wrap sm:flex-nowrap  outline`}> {/* fix the alignment */}
-                          <img src={`public/images/icon-${handleIcons(index)}.svg`} alt="" />{item.category} <span className={'flex justify-end w-full gap-1'}>{index ? item.score : ''} <span>{index ? '/ 100' : ''}</span></span></li>)}
+                          className={`text-${handleSummaryTextColor(index)} bg-${handleSummaryTextColor(index)} ${index === 0 ? 'hidden' : ''} bg-opacity-10 flex p-4 rounded-xl flex-wrap sm:flex-nowrap gap-3`}> {/* fix the alignment */}
+                          <img src={`public/images/icon-${handleIcons(index)}.svg`} alt="" />{item.category} 
+                          <span className={'flex justify-end w-full gap-1 text-dark-gray font-bold'}>{index ? item.score : ''} 
+                          <span className={`text-gray-400 font-normal`}>{index ? '/ 100' : ''}</span></span></li>)}
                         </ul>
                 </Container>
-                <Container className={`flex justify-center`}><Button className={`outline w-40`}>Continue</Button></Container>
-
+                <Container className={`flex justify-center`}>
+                <Button className={`bg-dark-gray w-full py-4 rounded-full text-white text-[18px] font-medium`}>Continue</Button></Container>
             </Card>
     </Container>
   )
