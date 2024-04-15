@@ -62,14 +62,14 @@ const Cards = () => {
                     </Container>
                 </Container>
         </Card>
-            <Card className={`bg-white w-full flex flex-col items-center gap-7`}>
-                <Container className={`px-10 w-full outline`}>
+            <Card className={`bg-white w-full flex flex-col gap-7`}>
+                <Container className={` w-full outline `}>
                         <Container>
                           <Title className={`text-[21px] font-medium`}>Summary</Title>
                         </Container>
                         <ul className={`flex flex-col gap-5`}>
                           {list && list.map((item, index) => <li key={index} 
-                          className={`text-${handleSummaryTextColor(index)} bg-${handleSummaryTextColor(index)} ${index === 0 ? 'hidden' : ''} bg-opacity-10 flex p-4 rounded-xl flex-wrap outline`}> {/* fix the alignment */}
+                          className={`text-${handleSummaryTextColor(index)} bg-${handleSummaryTextColor(index)} ${index === 0 ? 'hidden' : ''} bg-opacity-10 flex p-4 rounded-xl flex-wrap sm:flex-nowrap  outline`}> {/* fix the alignment */}
                           <img src={`public/images/icon-${handleIcons(index)}.svg`} alt="" />{item.category} <span className={'flex justify-end w-full gap-1'}>{index ? item.score : ''} <span>{index ? '/ 100' : ''}</span></span></li>)}
                         </ul>
                 </Container>
