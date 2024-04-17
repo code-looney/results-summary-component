@@ -49,7 +49,7 @@ const Cards = () => {
 
   return (
     <Container className={`bg-white h-screen w-screen md:w-auto flex flex-col md:flex-row  md:h-[500px]`}>
-        <Card className={`flex flex-col gap-5 justify-center outline`}>
+        <Card className={`flex flex-col gap-5 justify-center`}>
                 <Container className={`md:w-[400px] pt-6 pb-10 bg-gradient-to-t from-royal to-slate flex flex-col items-center rounded-b-[30px] md:rounded-[30px] gap-5`}>
                     <Title className={`text-lavender text-[21px] md:text-[24px] font-medium`}>Your Result</Title>
                     <Container 
@@ -62,7 +62,7 @@ const Cards = () => {
                     </Container>
                 </Container>
         </Card>
-            <Card className={`bg-white w-full flex flex-col gap-7 px-7 pb-14 pt-7 outline`}>
+            <Card className={`bg-white w-full flex flex-col gap-7 px-7 pb-14 pt-7`}>
                 <Container className={` w-full flex flex-col gap-7`}>
                         <Container>
                           <Title className={`text-[18px] font-medium text-dark-gray`}>Summary</Title>
