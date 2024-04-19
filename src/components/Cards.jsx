@@ -12,12 +12,13 @@ const Cards = () => {
   const [score, setScore] = useState(null)
   const bgColors = ['bg-light-red', 'bg-orangey', 'bg-green-teal', 'bg-cobalt'];
   const textColors = ['text-light-red', 'text-orangey', 'text-green-teal', 'text-cobalt'];
-
+ 
 
   useEffect(() => {
     fetch('data.json')
     .then(res => res.json())
     .then(data => setList(data))
+    .catch(err => console.error(`${err}: Check the data.json file to correct any mistakes`))
   }, [])
 
 
