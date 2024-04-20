@@ -49,12 +49,12 @@ const Cards = () => {
   } 
 
   return (
-    <Container className={`bg-white h-screen w-screen md:w-auto flex flex-col md:flex-row  md:h-[500px]`}>
-        <Card className={`flex flex-col gap-5 justify-center`}>
-                <Container className={`md:w-[400px] pt-6 pb-10 bg-gradient-to-t from-royal to-slate flex flex-col items-center rounded-b-[30px] md:rounded-[30px] gap-5`}>
+    <Container className={`bg-white h-screen w-screen md:w-auto flex flex-col md:flex-row md:h-[500px] `}>
+        <Card className={`flex flex-col gap-5  justify-center relative z-50`}>
+                <Container className={` md:h-full md:w-[350px] pt-6 pb-10 bg-gradient-to-t from-royal to-slate flex flex-col items-center rounded-b-[30px] md:rounded-[30px] gap-5`}>
                     <Title className={`text-lavender text-[21px] md:text-[24px] font-medium`}>Your Result</Title>
                     <Container 
-                    className={`bg-gradient-to-b from-violet to-persian text-pale w-48 h-48 md:w-[220px] md:h-[220px] flex flex-col items-center justify-center rounded-full text-[64px] font-bold leading-snug`}>
+                    className={`bg-gradient-to-b from-violet to-persian text-pale w-48 h-48 md:w-[200px] md:h-[200px] flex flex-col items-center justify-center rounded-full text-[64px] font-bold leading-snug`}>
                       {result} <span 
                     className={`text-lavender text-[14px]`}>of 100</span></Container>
                     <Container className={`flex flex-col items-center gap-2 md:text-center`}>
@@ -63,7 +63,7 @@ const Cards = () => {
                     </Container>
                 </Container>
         </Card>
-            <Card className={`bg-white w-full flex flex-col gap-7 px-7 pb-14 pt-7`}>
+            <Card className={`bg-white w-full md:w-[370px] flex flex-col gap-7 px-7 md:px-[60px] md:pr-[30px] pb-14 pt-7 shadow-lg md:translate-x-[-30px] relative z-20`}>
                 <Container className={` w-full flex flex-col gap-7`}>
                         <Container>
                           <Title className={`text-[18px] font-medium text-dark-gray`}>Summary</Title>
@@ -77,7 +77,7 @@ const Cards = () => {
                         </ul>
                 </Container>
                 <Container className={`flex justify-center`}>
-                <Button className={`bg-dark-gray w-full py-4 rounded-full text-white text-[18px] font-medium`}>Continue</Button></Container>
+                <Button className={`bg-dark-gray w-full py-4 md:py-3 md:w-[350px] rounded-full text-white text-[18px] font-medium`}>Continue</Button></Container>
             </Card>
     </Container>
   )
